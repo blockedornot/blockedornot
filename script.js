@@ -21,7 +21,11 @@ function get(url, onGet) {
             working();
         } else {
             blocked();
-        }    });
+        }    
+    }).catch(error => {
+                    blocked();
+                });
+    
 }
 
 function waiting() {
